@@ -6,274 +6,179 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Santander UK Plc</title>
+<title>Title of the document.</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600' rel='stylesheet' type='text/css'/>
 </head>
 <body style="background-color: #ffffff;">
-<style> 
-@media screen {
+<style>
+  /* 
+  These are the base styles for the email so that it is structure well in Desktop ESPs. 
+  We have the main body styles which align the email correctly an give the email it's base fonts and styles,
+  followed by a few styles which ensure that the colours of the links are per brand and not overwritten by the ESP or device. 
+  */
+  body { width: 100%; font-family: 'Open Sans', 'OpenSans-Regular', Arial, Helvetica, sans-serif; font-weight: normal; background: #FFFFFF; background-color: #FFFFFF; -webkit-text-size-adjust: none; 	padding:0; margin:0; }
+  
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass a.textlink, .ExternalClass a.textlink:link { color:#333333!important;}
+  .ExternalClass a.textlink:visited { color:#333333!important;}
+  .ExternalClass a.textlink:active { color:#333333!important;}
+  .ExternalClass a.btnlink, .ExternalClass a.btnlink:link {color:#ffffff!important;}
+  .ExternalClass a.btnlink:visited { color:#ffffff!important;}
+  .ExternalClass a.btnlink:active { color:#ffffff!important;}
+  .ExternalClass a.btnlinkred, .ExternalClass a.btnlinkred:link {color:#ec0000!important;}
+  .ExternalClass a.btnlinkred:visited { color:#ec0000!important;}
+  .ExternalClass a.btnlinkred:active { color:#ec0000!important;}
+  
+  .thread-item.expanded, .thread-body .body, div.undoreset, div.body { width:100%!important; }
+  table { border-collapse:collapse;  mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  td { border-collapse: collapse; }
+  table[class=section] { width: 100% !important; padding: 0px 0px !important;mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  table[class=section] .maintable { width: 600px !important; }
+  img { outline:none; display:block; text-decoration:none; -ms-interpolation-mode: bicubic; } 
+  a img { border:none; }
+  *[class="hide-all"], *[class="hide-desktop"]  {display:none !important; width:0 !important; height:0 !important; max-height:0 !important; line-height:0 !important; mso-hide:all !important; overflow:hidden !important; visibility:hidden !important; }
+  *[class="hide-mobile"] {display:display; visibility: visible !important; }
 
-@font-face {
-font-family: 'OpenSans-Light';
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Light/OpenSans-Light.eot');
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Light/OpenSans-Light.woff') format('woff'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Light/OpenSans-Light.ttf') format('truetype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Light/OpenSans-Light.svg') format('svg');
-font-weight: normal;
-font-style: normal;
-}
-		
-@font-face {
-font-family: 'OpenSans-Regular';
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Regular/OpenSans-Regular.eot');
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Regular/OpenSans-Regular.woff') format('woff'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Regular/OpenSans-Regular.ttf') format('truetype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Regular/OpenSans-Regular.svg') format('svg');
-font-weight: normal;
-font-style: normal;
-}
-		
-@font-face {
-font-family: 'OpenSans-Bold';
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Bold/OpenSans-Bold.eot');
-src: url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Bold/OpenSans-Bold.woff') format('woff'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Bold/OpenSans-Bold.ttf') format('truetype'),
-	url('http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/fonts/open-sans/Bold/OpenSans-Bold.svg') format('svg');
-font-weight: normal;
-font-style: normal;
-}
+  strong { font-weight:bold; }
 
+  /* #hero is an ID to ensure that the header is the width we intend it to be rendered at. */
+  table[class=section] #hero { width: 800px !important; }
 
-}
-	
-body { width: 100%; font-family: 'Open Sans', 'OpenSans-Regular', Arial, Helvetica, sans-serif; font-weight: normal; background: #FFFFFF; background-color: #FFFFFF; -webkit-text-size-adjust: none; 	padding:0; margin:0; }
-.ReadMsgBody { width: 100%; }
-.ExternalClass { width: 100%; }
-.ExternalClass a.textlink, .ExternalClass a.textlink:link { color:#333333!important;}
-.ExternalClass a.textlink:visited { color:#333333!important;}
-.ExternalClass a.textlink:active { color:#333333!important;}
-.ExternalClass a.btnlink, .ExternalClass a.btnlink:link {color:#ffffff!important;}
-.ExternalClass a.btnlink:visited { color:#ffffff!important;}
-.ExternalClass a.btnlink:active { color:#ffffff!important;}
-.ExternalClass a.btnlinkred, .ExternalClass a.btnlinkred:link {color:#ec0000!important;}
-.ExternalClass a.btnlinkred:visited { color:#ec0000!important;}
-.ExternalClass a.btnlinkred:active { color:#ec0000!important;}
-.thread-item.expanded, .thread-body .body, div.undoreset, div.body { width:100%!important; }
-table { border-collapse:collapse;  mso-table-lspace:0pt; mso-table-rspace:0pt; }
-td { border-collapse: collapse; }
-table[class=section] { width: 100% !important; padding: 0px 0px !important;mso-table-lspace:0pt; mso-table-rspace:0pt; }
-table[class=section] .maintable { width: 600px !important; }
-.tightener { height: 10px; }
-.noPadding { padding: 0px !important; }
-img { outline:none; display:block; text-decoration:none; -ms-interpolation-mode: bicubic; } 
-a img { border:none; }
-*[class="hide-all"], *[class="hide-desktop"]  {display:none !important; width:0 !important; height:0 !important; max-height:0 !important; line-height:0 !important; mso-hide:all !important; overflow:hidden !important; visibility:hidden !important; }
-*[class="hide-mobile"] {display:display; visibility: visible !important; }
+  /* .mob-masthead is the class assigned to the responsive mobile header. */
+  /* This can be removed if your intentions are to not have a responsive header image for mobile. */
+  div[class="mob-masthead"] {
+    display:none !important;
+    width:0 !important;
+    height:0 !important;
+    max-height:0 !important; 
+    line-height:0 !important; 
+    mso-hide:all !important;
+    overflow:hidden !important ;
+    visibility:hidden !important;
+  }
 
-strong { font-weight:bold; }
+  /* Same or similar styles to above but targeting the img tag. */
+  div[class="mob-masthead"] img {
+    display:none;
+    width:0;
+    height:0;
+    max-height:0; 
+    line-height:0; 
+    mso-hide:all;
+    overflow:hidden;
+    visibility:hidden;
+  }
 
-table[class=section] #hero { width: 800px !important; }
-div[class="mob-masthead"] {
-	display:none !important;
-	width:0 !important;
-	height:0 !important;
-	max-height:0 !important; 
-	line-height:0 !important; 
-	mso-hide:all !important;
-	overflow:hidden !important ;
-	visibility:hidden !important;
-}
-
-div[class="mob-masthead"] img {
-	display:none;
-	width:0;
-	height:0;
-	max-height:0; 
-	line-height:0; 
-	mso-hide:all;
-	overflow:hidden;
-	visibility:hidden;
-}
-
+/* Tablet media query */
 @media only screen and (max-width: 768px) {
-table[class=section] #hero { width: 100% !important; }
+    table[class=section] #hero { width: 100% !important; }
 }
 
+/* Mobile media query */
 @media only screen and (max-width: 480px) {
-body, div:not(#container) body {
-	min-width: 320px !important;
-	-webkit-text-size-adjust: none !important;
-}
+    body, div:not(#container) body {
+      min-width: 320px !important;
+      -webkit-text-size-adjust: none !important;
+    }
 
-table[class=section] { width: 100% !important; }
-table[class=section] .maintable { width: 320px !important; }
-.module, div:not(#container) .module { width: 100% !important; }
-.module90, div:not(#container) .module90 { width: 90% !important; }
-.modulehalf, div:not(#container) .modulehalf { width: 50% !important; }
-.moduleheader {background: #ec0000; width: 100% !important;}
-.signifier, div:not(#container) .signifier {
-	background-color:#ffffff!important;
-	padding-left:16px!important;
-	width:100%!important;
-	text-align:center!important;
-	height:26px!important;
-	color:#333333!important;
-}
-.mobicentered, div:not(#container) .mobicentered { text-align: center !important; }
-*[class].mobitightener { height:10px!important; }
-*[class="hide-desktop"] {display:display !important; width: 20px !important; height:20px !important; max-height: 20px !important; line-height:20px !important; overflow:hidden !important; visibility: visible !important; }
-*[class="hide-mobile"] {display: none !important; visibility: none !important; }
-.mob-center, div:not(#container) .mob-center { text-align: center !important; }
-.header, div:not(#container) .header { width: 90% !important; margin-top: 10px !important; }
-.logo {
-	align-content:center!important;
-	table-layout:auto!important;
-	text-align:center!important;
-	margin-left:auto!important;
-	margin-right:auto!important;
-}
-.spread { width: 100% !important; height: auto !important; }
-*[class].noborder { border:none!important; }
-*[class].alignleft { text-align:left!important; }
-*[class].mob-font17 { font-size:17px!important; line-height:21px!important; }
-*[class].mob-font18 { font-size:18px!important; line-height:22px!important; }
-*[class].mob-font25 { font-size:25px!important; line-height:29px!important; }
-*[class].mob-font27 { font-size:27px!important; line-height:31px!important; }
-*[class].mob-font28 { font-size:28px!important; line-height:33px!important; }
-*[class].contacticon { width:61px!important; height:auto!important; }
-*[class].mobifont10 { font-size:10px!important; line-height:14px!important; }
-*[class].mobifont13 { font-size:13px!important; line-height:17px!important; }
-*[class].mobifont14 { font-size:14px!important; line-height:18px!important; }
-*[class].mobifont15 { font-size:15px!important; line-height:28px!important; }
-*[class].mobifont17 { font-size:17px!important; line-height:21px!important; }
-*[class].mobifont18 { font-size:18px!important; line-height:30px!important; }
-*[class].mobifont22 { font-size:22px!important; line-height:26px!important; }
-*[class].mobifont25 { font-size:25px!important; line-height:29px!important; }
-*[class].mobifont27 { font-size:27px!important; line-height:31px!important; }
-*[class].mobifont28 { font-size:28px!important; line-height:33px!important; }
-*[class].mobifont30 { font-size:30px!important; line-height:34px!important; }
-*[class].mobifont32 { font-size:32px!important; line-height:36px!important; }
-*[class].mobipadd10 { padding:10px!important; }
-*[class].mobipadd16 { padding:16px!important; }
-*[class].mobipt5px { padding-top:5px!important; }
-*[class].mobipb5px { padding-bottom:5px!important; }
-*[class].mobipb8px { padding-bottom:8px!important; }
-*[class].mobipt10px { padding-top:10px!important; }
-*[class].mobipb10px { padding-bottom:10px!important; }
-*[class].mobipt16px { padding-top:16px!important; }
-*[class].mobipb16px { padding-bottom:16px!important; }
-*[class].mobipl0 { padding-left:0px!important; }
-*[class].mobipl14px { padding-left:14px!important; }
-*[class].mobih140 { height:140px!important; }
-*[class].mobiw52 { width:52px!important; }
-*[class].mobiplr0 { padding-left:0!important; padding-right:0px!important; }
-*[class].renewal-icn { padding-left:0!important; padding-right:0px!important; padding-top:0px!important; padding-bottom:16px!important; }
-*[class].mobiplr16px { padding-left:16px!important; padding-right:16px!important; }
-*[class].mobisideimg { width:288px!important; height:auto!important; padding-bottom:16px!important; }
-.awardlogos1 { width:172px!important; height:auto!important; }
-.awardlogos2 { width:185px!important; height:auto!important; }
-*[class].storeicon { width:172px!important; height:auto!important; padding-bottom:16px!important; }
+    table[class=section] { width: 100% !important; }
+    table[class=section] .maintable { width: 320px !important; }
+    .module, div:not(#container) .module { width: 100% !important; }
+    .modulehalf, div:not(#container) .modulehalf { width: 50% !important; }
+    .moduleheader {background: #ec0000; width: 100% !important;}
+    .mobicentered, div:not(#container) .mobicentered { text-align: center !important; }
+    *[class].mobitightener { height:10px!important; }
+    *[class="hide-desktop"] {display:display !important; width: 20px !important; height:20px !important; max-height: 20px !important; line-height:20px !important; overflow:hidden !important; visibility: visible !important; }
+    *[class="hide-mobile"] {display: none !important; visibility: none !important; }
+    .mob-center, div:not(#container) .mob-center { text-align: center !important; }
+    .header, div:not(#container) .header { width: 90% !important; margin-top: 10px !important; }
+    .logo {
+      align-content:center!important;
+      table-layout:auto!important;
+      text-align:center!important;
+      margin-left:auto!important;
+      margin-right:auto!important;
+    }
 
-table[class=section] #hero { width: 320px !important; height: 10px !important;}
-table[class=section] .herocell { width: 320px !important; height: 10px !important;}
-.headline { background: #ffffff !important; opacity: 1 !important;}
+    /* A few helper classes to change the image width, font size and also the padding on a module */
+    .spread { width: 100% !important; height: auto !important; }
+    *[class].noborder { border:none!important; }
+    *[class].alignleft { text-align:left!important; }
+    *[class].mobifont10 { font-size:10px!important; line-height:14px!important; }
+    *[class].mobifont12 { font-size:12px!important; line-height:16px!important; }
+    *[class].mobifont14 { font-size:14px!important; line-height:18px!important; }
+    *[class].mobifont16 { font-size:16px!important; line-height:20px!important; }
+    *[class].mobifont18 { font-size:18px!important; line-height:30px!important; }
+    *[class].mobipadd10 { padding:10px!important; }
+    *[class].mobipadd16 { padding:16px!important; }
+    *[class].mobipt5px { padding-top:5px!important; }
+    *[class].mobipb5px { padding-bottom:5px!important; }
+    *[class].mobipb8px { padding-bottom:8px!important; }
+    *[class].mobipt10px { padding-top:10px!important; }
+    *[class].mobipb10px { padding-bottom:10px!important; }
+    *[class].mobipt16px { padding-top:16px!important; }
+    *[class].mobipb16px { padding-bottom:16px!important; }
+    *[class].mobipl0 { padding-left:0px!important; }
+    *[class].mobipl14px { padding-left:14px!important; }
+    *[class].mobih140 { height:140px!important; }
+    *[class].mobiw52 { width:52px!important; }
+    *[class].mobiplr0 { padding-left:0!important; padding-right:0px!important; }
+    *[class].renewal-icn { padding-left:0!important; padding-right:0px!important; padding-top:0px!important; padding-bottom:16px!important; }
+    *[class].mobiplr16px { padding-left:16px!important; padding-right:16px!important; }
+    *[class].mobisideimg { width:288px!important; height:auto!important; padding-bottom:16px!important; }
+    .awardlogos1 { width:172px!important; height:auto!important; }
+    .awardlogos2 { width:185px!important; height:auto!important; }
+    *[class].storeicon { width:172px!important; height:auto!important; padding-bottom:16px!important; }
 
-div[class="mob-masthead"] {
-	position: relative !important;
-    overflow: hidden !important;
-    width: 100% !important;
-    height:140px !important;
-    max-height: 140px!important;
-    display: block !important;
-    visibility: visible !important;
-}
+    table[class=section] #hero { width: 320px !important; height: 10px !important;}
+    table[class=section] .herocell { width: 320px !important; height: 10px !important;}
+    .headline { background: #ffffff !important; opacity: 1 !important;}
 
-div[class="mob-masthead"] img {
-	position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    margin-left: 0px !important;
-    height: 100% !important;
-    max-height: 100% !important;
-    width: 100% !important;
-    display: block !important;
-    visibility: visible !important;
-}
-*[class].custom1 { height:10px!important; padding-bottom:16px!important;  padding-left:16px!important; padding-right:16px!important; }
-*[class].custom2 {text-align: center !important; padding-bottom:16px!important; }
-*[class].mobiexpandimg1 { width:288px!important; height:320px!important; display:block;}
+    div[class="mob-masthead"] {
+      position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        height:140px !important;
+        max-height: 140px!important;
+        display: block !important;
+        visibility: visible !important;
+    }
 
-#SPF {
-	display:block;
-	background-image:url("http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/images/SPF-new-mobile-001.png")!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:320px!important;
-	height:38px!important;
-  backgound-color: #ec0000;
-}
-#SPFBG { background-color:#d80000!important; }
+    div[class="mob-masthead"] img {
+      position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin-left: 0px !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    *[class].custom1 { height:10px!important; padding-bottom:16px!important;  padding-left:16px!important; padding-right:16px!important; }
+    *[class].custom2 {text-align: center !important; padding-bottom:16px!important; }
+    *[class].mobiexpandimg1 { width:288px!important; height:320px!important; display:block;}
 
-#RespImgOne {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/E1-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:363px!important;
-}	
-	
-#RespImgTwo {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/E2-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:313px!important;
-}
-#RespImgThree {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/E3-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:314px!important;
-}
-#RespImgFour {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/F-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:465px!important;
-}
-#RespImgFive {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/G-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:235px!important;
-}
-#RespImgSix {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/H-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:313px!important;
-}
-#RespImgSeven {
-	display:block;
-	background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/I-mbl.png')!important;
-	background-repeat:no-repeat!important;
-	background-position:center!important;
-	width:288px!important;
-	height:313px!important;
-}
+    #SPF {
+      display:block;
+      background-image:url("http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/images/SPF-new-mobile-001.png")!important;
+      background-repeat:no-repeat!important;
+      background-position:center!important;
+      width:320px!important;
+      height:38px!important;
+      backgound-color: #ec0000;
+    }
+    #SPFBG { background-color:#d80000!important; }
+
+    #RespImgOne {
+      display:block;
+      background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/E1-mbl.png')!important;
+      background-repeat:no-repeat!important;
+      background-position:center!important;
+      width:288px!important;
+      height:363px!important;
+    }
 	
 }
 	
