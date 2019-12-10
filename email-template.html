@@ -16,7 +16,7 @@
   These are the base styles for the email so that it is structure well in Desktop ESPs. 
   We have the main body styles which align the email correctly an give the email it's base fonts and styles,
   followed by a few styles which ensure that the colours of the links are per brand and not overwritten by the ESP or device.
-  
+
   */
   body { width: 100%; font-family: 'Open Sans', 'OpenSans-Regular', Arial, Helvetica, sans-serif; font-weight: normal; background: #FFFFFF; background-color: #FFFFFF; -webkit-text-size-adjust: none; 	padding:0; margin:0; }
   
@@ -84,12 +84,21 @@
       -webkit-text-size-adjust: none !important;
     }
 
+    /* Classes that determine the width of the main container and modules below 480px */
     table[class=section] { width: 100% !important; }
     table[class=section] .maintable { width: 320px !important; }
     .module, div:not(#container) .module { width: 100% !important; }
+
+    /* A few other classes that can be used when a trickier layout is required on mobile devices */
     .modulehalf, div:not(#container) .modulehalf { width: 50% !important; }
+
+    /* .moduleheader controls the width and background colour of the module where the logo is situated */
     .moduleheader {background: #ec0000; width: 100% !important;}
+
+    /* Centers any content within the module */
     .mobicentered, div:not(#container) .mobicentered { text-align: center !important; }
+
+    /* Restricts the height of the module to a certain height */
     *[class].mobitightener { height:10px!important; }
     *[class="hide-desktop"] {display:display !important; width: 20px !important; height:20px !important; max-height: 20px !important; line-height:20px !important; overflow:hidden !important; visibility: visible !important; }
     *[class="hide-mobile"] {display: none !important; visibility: none !important; }
