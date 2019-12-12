@@ -168,26 +168,14 @@
         display: block !important;
         visibility: visible !important;
     }
-    *[class].custom1 { height:10px!important; padding-bottom:16px!important;  padding-left:16px!important; padding-right:16px!important; }
-    *[class].custom2 {text-align: center !important; padding-bottom:16px!important; }
-    *[class].mobiexpandimg1 { width:288px!important; height:320px!important; display:block;}
 
-    #SPF {
-      display:block;
-      background-image:url("http://cdn.info.yoursantander.co.uk/campaigns/assets/elements/images/SPF-new-mobile-001.png")!important;
-      background-repeat:no-repeat!important;
-      background-position:center!important;
-      width:320px!important;
-      height:38px!important;
-      backgound-color: #ec0000;
-    }
-    #SPFBG { background-color:#d80000!important; }
-
+    /* An example of using a repsonsive image */
     #RespImgOne {
       display:block;
-      background-image:url('http://cdn.info.yoursantander.co.uk/campaigns/CRM/GI837/imgs/E1-mbl.png')!important;
-      background-repeat:no-repeat!important;
-      background-position:center!important;
+      /* I need to revist this section and put a placeholder image in so the template functions when downloaded */
+      background-image:url('#') !important; /* I have used single quotations here because there was a bug in Android devices not reading the url */
+      background-repeat:no-repeat !important;
+      background-position:center !important;
       width:288px!important;
       height:363px!important;
     }
@@ -195,7 +183,6 @@
 }
 
 </style>
-<!-- cc:534534 cn:64576546654 --> 
 <!--[if mso]>
 	<style type="text/css">
         .OSfallback {font-family: Arial, Helvetica, sans-serif!important;}
