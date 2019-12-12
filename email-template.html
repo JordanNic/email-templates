@@ -17,6 +17,8 @@
   We have the main body styles which align the email correctly an give the email it's base fonts and styles,
   followed by a few styles which ensure that the colours of the links are per brand and not overwritten by the ESP or device.
 
+  TODO: Revist the css within the <style> tags as some of this could be stripped back.
+
   */
   body { width: 100%; font-family: 'Open Sans', 'OpenSans-Regular', Arial, Helvetica, sans-serif; font-weight: normal; background: #FFFFFF; background-color: #FFFFFF; -webkit-text-size-adjust: none; 	padding:0; margin:0; }
   
@@ -170,12 +172,16 @@
     }
 
     /* An example of using a repsonsive image */
+    /* You need to make sure the styles are closed up (i.e. no line breaks) as this may cause issues with deliverabilty */
     #RespImgOne {
       display:block;
+
       /* I need to revist this section and put a placeholder image in so the template functions when downloaded */
       background-image:url('#') !important; /* I have used single quotations here because there was a bug in Android devices not reading the url */
       background-repeat:no-repeat !important;
       background-position:center !important;
+
+      /* The width and height are dependant on the image and container you are trying to get the image to fit within */
       width:288px!important;
       height:363px!important;
     }
